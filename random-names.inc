@@ -9,6 +9,12 @@
     
 */
 
+#if defined _INC_RANDOM_NAMES
+    #endinput
+#endif
+
+#define _INC_RANDOM_NAMES
+
 #if !defined _INC_SSCANF
     #error Include sscanf2 before random-names.inc, Link: https://github.com/Y-Less/sscanf
 #endif
@@ -100,7 +106,7 @@ stock GetFirstName(gender = GENDER_NONE) {
     new ret[32];
     
     if (gender == GENDER_NONE) {
-        gender = Random(1, 2);
+        gender = Random(GENDER_MALE, GENDER_FEMALE);
     }
     
     if (gender == GENDER_MALE) {
