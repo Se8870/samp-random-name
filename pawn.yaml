@@ -3,7 +3,6 @@ user: Kirima2nd
 repo: samp-random-name
 entry: test.pwn
 output: test.amx
-include_path: pawno/include
 dependencies:
 - sampctl/samp-stdlib
 - Y-Less/sscanf:2.10.2-r2
