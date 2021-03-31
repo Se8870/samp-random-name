@@ -74,14 +74,20 @@ stock Random(min, max = cellmin)
 #endif 
 
 static __GetName(const filename[]) {
-    if (!fexist(filename)) return STR_NULL;
+    if (!fexist(filename)) {
+        printf("[random-name Error]: %s not found!", filename);
+        return STR_NULL;
+    }
 
     new 
         Float:selected = RandomFloat(0.0, 1.0) * 90,
         File: handl = fopen(filename);
 
-    if (!handl) return STR_NULL;
-
+    if (!handl) {
+        printf("[random-name Error]: Handle ID:%d not valid!", _:handl);
+        return STR_NULL;
+    }
+    
     new strTemp[128];
     while(fread(handl, strTemp, sizeof strTemp)) {
         new name[32], Float:cummulative[2], ln;
