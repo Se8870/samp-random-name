@@ -1,6 +1,6 @@
 site: ""
 user: Kirima2nd
-repo: random-name
+repo: samp-random-name
 entry: test.pwn
 output: test.amx
 dependencies:
