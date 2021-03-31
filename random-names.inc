@@ -108,7 +108,7 @@ stock GetFirstName(gender = GENDER_NONE) {
         return ret;
     }
     else if (gender == GENDER_FEMALE) {
-        format(ret, sizeof ret, "%s", __GetName(NAME_PATH"/dist.male.first"));
+        format(ret, sizeof ret, "%s", __GetName(NAME_PATH"/dist.female.first"));
         return ret;
     }
     return STR_NULL;
