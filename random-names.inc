@@ -104,11 +104,11 @@ stock GetFirstName(gender = GENDER_NONE) {
     }
     
     if (gender == GENDER_MALE) {
-        format(ret, sizeof ret, "%s", __GetName(NAME_PATH"/dist.male.first"));
+        format(ret, sizeof ret, "%s", __Capitalize(__GetName(NAME_PATH"/dist.male.first")));
         return ret;
     }
     else if (gender == GENDER_FEMALE) {
-        format(ret, sizeof ret, "%s", __GetName(NAME_PATH"/dist.female.first"));
+        format(ret, sizeof ret, "%s", __Capitalize(__GetName(NAME_PATH"/dist.female.first")));
         return ret;
     }
     return STR_NULL;
@@ -116,12 +116,12 @@ stock GetFirstName(gender = GENDER_NONE) {
 
 stock GetLastName() {
     new ret[32];
-    format(ret, sizeof ret, "%s", __GetName(NAME_PATH"/dist.all.last"));
+    format(ret, sizeof ret, "%s", __Capitalize(__GetName(NAME_PATH"/dist.all.last")));
     return ret;
 }
 
 stock GetRandomName(gender = GENDER_NONE, bool:underscore = false) {
     new ret[32];
-    format(ret, sizeof ret, "%s%c%s", __Capitalize(GetFirstName(gender)), (underscore ? '_' : ' '), __Capitalize(GetLastName()));
+    format(ret, sizeof ret, "%s%c%s", GetFirstName(gender), (underscore ? '_' : ' '), GetLastName());
     return ret;
 }
