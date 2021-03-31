@@ -16,11 +16,16 @@ Simply install to your project:
 sampctl package install Kirima2nd/samp-random-name
 ```
 
-Include in your code and begin using the library:
-
 ```pawn
 #include <random-name>
 ```
+
+### **NOTE**: 
+
+since sampctl doesn't support scriptfiles, you'll have to manually move the scriptfiles to your project
+or if you're not sampctl user, you can just ignore this message.
+
+Include in your code and begin using the library:
 
 ## Function Lists
 
