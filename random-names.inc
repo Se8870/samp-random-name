@@ -15,6 +15,7 @@
 
 #define _INC_RANDOM_NAMES
 
+#tryinclude <YSI_Core\y_utils>
 #tryinclude <sscanf2>
 
 #if !defined _INC_SSCANF
