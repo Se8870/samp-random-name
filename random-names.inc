@@ -15,6 +15,8 @@
 
 #define _INC_RANDOM_NAMES
 
+#tryinclude <sscanf2>
+
 #if !defined _INC_SSCANF
     #error Include sscanf2 before random-names.inc, Link: https://github.com/Y-Less/sscanf
 #endif
